@@ -1,0 +1,153 @@
+Command line argument:
+Aditional word or phrase that you type that modifies the output
+
+ex) clang -o hello hello.c -lcs50
+    - clang: compiler
+    - -o: change output
+    - hello: renames a.out to hello
+    - hello.c: compiled
+    - -lcs50: any non included library must be defined by -l (link)
+./hello
+
+Compiling Steps:
+    + Preprossesing:
+        Anything that needs to be initialized before anything else happens
+        ex) #include ......
+
+    + Compiling:
+        Once a program has been preprocessed, clang or any other compiler converts the code to assembley code (less user friendly).
+
+    + Assembling:
+        Converts the assembley code to machine code (1's and 0's)
+
+    + Linking:
+        Combining all the 0's and 1's from the libraries, your code, and links them all together
+
+Decompiling:
+    + Converting machine code back to readable code
+        - Decompiling isn't the best because it is easier to find exploits in the code
+    + It is not so simple because the machine code removes variable names, and can change loop types
+
+Debugging:
+    + Fixing logical or syntax errors
+        - lab 2 is the debugged code lab
+
+    Debugger:
+        There is an automated debugger in VSCode that CS50 provides, you can set a breakpoint where the code will pause
+            - debug50 ./machine code name
+                - Stop Over: step over the paused line
+                - Step Into: each line of the paused line
+
+    Rubber Duck Debugging:
+        - Sound out your problem with a rubber duck or another person
+
+Arrays:
+    Data Types:
+        + Bool : 1 byte, true/false
+        + Int : 4 bytes, whole numbers
+        + Long : 8 bytes, whole numbers
+        + Float : 4 bytes, numbers with decimals
+        + Double :  8 bytes, numbers with decimals
+        + Char : 1 byte, characters
+        + String : ? bytes, words
+
+    Type Casting:
+        - Changing the data type of a line of code
+        ex) ...../ (float) 3
+
+    - An Array is a way of storing data back to back to back
+        ex) int scores[3]; : give me 12 Bytes in total
+            int scores[0] = 72;
+            int scores[1] = 77;
+            int scores[2] = 33;
+        - Makes it so that you dont need to declare a seperate var each time, but this way is kinda bad because of hard coding values
+            - Dont hard code the values of the array, use a for loop that promopts user input
+            ex)
+               int scores[3];
+               for (int i = 0; i < 3; i++)
+               {
+                scores[i] = get_int("scores: ");
+               }
+
+    Strings: They are Variable length
+        - Just an array of characters
+        ex)
+            string s = "HI!" == array[3]
+            array[0] = H
+            array[1] = I
+            array[2] = !
+            array[3] = \0
+
+    Break character: \0, special zero, NUL, means string ends here
+
+        string.h:
+            - Library of string related functions
+
+Command Line Arguments: replaces the void section in main
+    - Allows for faster and more efficient coding
+        ex)
+            #include <cs50.h>
+            #include <stdio.h>
+
+            int main(int argc, string argv[])
+            {
+                string name = get_string("Name: ");
+                printf("Hello %s\n", name);
+            }
+        - argv[] is some array of strings or all words you type as the prompt, argc == argument count, or the length of the array of strings
+
+    run it with ./greet INPUT to say hello INPUT
+
+cowsay:
+- A CLA of a cow saying something in ASCII Art in the terminal
+    ex) cowsay moo
+_____
+< moo >
+ -----
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+    ex) cowsay -f duck quack
+ _______
+< quack >
+ -------
+ \
+  \
+   \ >()_
+      (__)__ _
+
+    ex) cowsay -f dragon RAWR
+ ______
+< RAWR >
+ ------
+      \                    / \  //\
+       \    |\___/|      /   \//  \\
+            /0  0  \__  /    //  | \ \
+           /     /  \/_/    //   |  \  \
+           @_^_@'/   \/_   //    |   \   \
+           //_^_/     \/_ //     |    \    \
+        ( //) |        \///      |     \     \
+      ( / /) _|_ /   )  //       |      \     _\
+    ( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
+  (( / / )) ,-{        _      `-.|.-~-.           .~         `.
+ (( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \
+ (( /// ))      `.   {            }                   /      \  \
+  (( / ))     .----~-.\        \-'                 .~         \  `. \^-.
+             ///.----..>        \             _ -~             `.  ^-`  ^-_
+               ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
+                                                                  /.-~
+
+Exit Status:
+    - A secret int that returns itself, typically in errors
+    ex) error 404
+
+    The int in main will always return an integer
+
+    echo $? : will display the exit status of the program a "0" means success
+
+Cryptography:
+    - Endripting code, scrambling what you want to say
+    - Decripting code, unscrambling what you want to say

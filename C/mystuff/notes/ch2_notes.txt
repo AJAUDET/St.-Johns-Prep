@@ -1,0 +1,81 @@
+Functions:
+    - allow for the decluttering of main()
+    - a black box with a set of 0+ inputs and 1 output
+        ex) add(a, b, c), mult(a,b)
+    - we call it a black box because if we aren't writing the function ourselves
+        we don't need to know how it is implemented under the hood
+
+        - Naming convention: Clear, simple understanding from name alone
+
+    - we use functions to Organize, Simplify, and for Reusability
+
+    - Function declaration: letting the compiler know that we are creating
+        a function, all declaration should be at the top of the compiler
+
+            ex) return-type name(argument-list);
+
+                - return type is what kind of variable the function will output
+                - name is what you want to call your function
+                - argument-list is the comma separated set of inputs
+
+    - int add_two_ints(int a, int b); we know this will add two ints
+
+    - float mult_two_floats(float x, float y); we know this will multiply two float numbers
+
+    Function Definition: where we define what a function will do
+        ex) int add_two_ints(int a, int b);
+
+            int add_two_ints(int a, int b)
+            {
+                int sum = a + b;
+                return sum;
+            }
+    Function Call: to call a function pass it appropriate arguments and assign the return value
+                    to something of the correct type.
+
+                    ex)
+                            int add_two_ints(int a, int b);
+
+                            int main(void)
+                            {
+                                int x, y, z;
+                               printf("Two ints: ")
+
+                               x = get_int("Int 1");
+                               y = get_int("Int 2");
+
+                               z = add_two_ints(x, y);
+
+                               printf("The sum of %i and %i is %i", x, y, z);
+                            }
+
+                            int add_two_ints(int a, int b)
+                            {
+                                int sum = a + b;
+                                return sum;
+                            }
+
+    Misc: a void return type means there is nothing returned, a void argument means there is no input required.
+
+            ex) bool valid_triangle(float a, float b, float c);
+
+                bool valid_triangle(float a, float b, float c,)
+                {
+                    if (a <= 0 || b <= 0 || c <= 0)
+                    {
+                        return false;
+                    }
+                    if (a^2 + b^2 == c^2)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                    return false;
+                    }
+                }
+
+
+In class lesson
+
+    render50 source file -o destination

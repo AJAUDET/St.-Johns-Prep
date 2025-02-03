@@ -1,0 +1,1 @@
+The purpose of compare.c is to introduce how different if statements are in Scratch compared to coding in C

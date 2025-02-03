@@ -1,0 +1,93 @@
+SWITCH CASE STATEMENTS:
+
+    Switch case statement evaluates a given expression and based on the evaluated value(matching a certain condition), it executes the statements associated with it. Basically, it is used to perform different actions based on different conditions(cases).
+
+    Switch case statements follow a selection-control mechanism and allow a value to change control of execution.
+    They are a substitute for long if statements that compare a variable to several integral values.
+    The switch statement is a multiway branch statement. It provides an easy way to dispatch execution to different parts of code based on the value of the expression.
+    In C, the switch case statement is used for executing one condition from multiple conditions. It is similar to an if-else-if ladder.
+
+    ex)
+    switch(expression)
+    {
+        case value1: statement_1;
+                break;
+        case value2: statement_2;
+                break;
+        .
+        .
+        .
+        case value_n: statement_n;
+                    break;
+
+        default: default_statement;
+    }
+
+    SEE switch.c for a demonstration of a switch in action.
+
+    RULES:
+    1. In a switch statement, the “case value” must be of “char” and “int” type.
+    2. There can be one or N number of cases.
+    3. The values in the case must be unique.
+    4. Each statement of the case can have a break statement. It is optional.
+    5. The default Statement is also optional.
+
+    HOW THEY WORK:
+    Step 1: The switch variable is evaluated.
+    Step 2: The evaluated value is matched against all the present cases.
+    Step 3A: If the matching case value is found, the associated code is executed.
+    Step 3B: If the matching code is not found, then the default case is executed if present.
+    Step 4A: If the break keyword is present in the case, then program control breaks out of the switch statement.
+    Step 4B: If the break keyword is not present, then all the cases after the matching case are executed.
+    Step 5: Statements after the switch statement are executed.
+
+    Flowchart : https://media.geeksforgeeks.org/wp-content/uploads/20230224161406/switch-case-in-c.png
+
+    CHEAT SHEET : https://www.geeksforgeeks.org/c-cheatsheet/?ref=shm
+
+
+Strings:
+    C String Functions
+    C language provides some useful functions for string manipulation in <string.h> header file. Some of them are as follows:
+
+    S. No.  Function    Description
+    1.      strlen()	Find the length of the string
+    2.      strcmp()	Compares two strings.
+    3.      strcpy()	Copy one string to another.
+    4.      strcat()	Concatenate one string with another.
+    5.      strchr()	Find the given character in the string.
+    6.      strstr()	Find the given substring in the string.
+
+Pointers:
+    - Pointers are the variables that store the address of another variable. They can point to any data type in C
+       - Syntax of Pointers:
+            ex) data_type * ptr_name;
+            Example in mystuff/notes/extracurricular/pointer/
+
+Escape Sequence:
+    Escape sequences are the characters that are used to represent those characters that cannot by represented normally. They start with ( \ ) backslash and can be used inside string literals.
+
+    The below table list some commonly used escape sequences:
+
+    Escape Sequence:
+    \b:	Backspace	It is used to move the cursor backward.
+    \n:	New Line	It moves the cursor to the start of the next line.
+    \r:	Carriage Return	It moves the cursor to the start of the current line.
+    \t:	Horizontal Tab	It inserts some whitespace to the left of the cursor and moves the cursor accordingly.
+    \v:	Vertical Tab	It is used to insert vertical space.
+    \\:	Backlash	Use to insert backslash character.
+    \”:	Double Quote	It is used to display double quotation marks.
+    \0:	NULL	It represents the NLL character.
+
+Operators
+    Operators are the symbols that are used to perform some kind of operation. Operators can be classified based on the type of operation they perform.
+
+    There are the following types of operators in C:
+
+    1. Arithmetic Operators	Operators that perform arithmetic operations.	+, -, *, /, %
+    2. Relational Operators	They are used to compare two values.	<, >, <=, >=, ==, !=
+    3. Bitwise Operators	They are used to perform bit-level operations on integers.	&, ^, |, <<, >>, ~
+    4. Logical Operators	They perform logical operations such as logical AND, logical OR, etc.	&&, ||, !
+    5. Conditional Operators	The conditional Operator is used to insert conditional code.	? :
+    6. Assignment Operators	They are used to assign some value to the variables.	=, +=, -=, <<=
+    7. Miscellaneous Operators	comma, addressof, sizeof, etc. are some other types of operators.	 , sizeof, &, *, ->, .

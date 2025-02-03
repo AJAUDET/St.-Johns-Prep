@@ -1,0 +1,4 @@
+fridge
+dishwasher
+gas stove
+microwave

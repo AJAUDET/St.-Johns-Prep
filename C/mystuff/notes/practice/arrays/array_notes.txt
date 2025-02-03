@@ -1,0 +1,78 @@
+Lecture Notes
+
+Arrays:
+    Data Types:
+        + Bool : 1 byte, true/false
+        + Int : 4 bytes, whole numbers
+        + Long : 8 bytes, whole numbers
+        + Float : 4 bytes, numbers with decimals
+        + Double :  8 bytes, numbers with decimals
+        + Char : 1 byte, characters
+        + String : ? bytes, words
+
+    Type Casting:
+        - Changing the data type of a line of code
+        ex) ...../ (float) 3
+
+    - An Array is a way of storing data back to back to back
+        ex) int scores[3]; : give me 12 Bytes in total
+            int scores[0] = 72;
+            int scores[1] = 77;
+            int scores[2] = 33;
+        - Makes it so that you dont need to declare a seperate var each time, but this way is kinda bad because of hard coding values
+            - Dont hard code the values of the array, use a for loop that promopts user input
+            ex)
+               int scores[3];
+               for (int i = 0; i < 3; i++)
+               {
+                scores[i] = get_int("scores: ");
+               }
+
+    Strings: They are Variable length
+        - Just an array of characters
+        ex)
+            string s = "HI!" == array[3]
+            array[0] = H
+            array[1] = I
+            array[2] = !
+            array[3] = \0
+
+    Break character: \0, special zero, NUL, means string ends here
+
+        string.h:
+            - Library of string related functions
+
+
+Doug Notes
+
+Arrays:
+    - useful and fundamental data structure
+    - used to hold values of the same type
+    - visualize a post office(a mail bank)
+
+    Arrays are indexed starting from 0
+        - First element is always array[0]
+        - Last element is always array[n-1]
+
+        WARNING: C WILL NOT STOP YOU FROM LEAVING THE ARRAY, segmentation fault
+
+    Array Declaration:
+
+    type name[size];
+    - type: type of array
+    - name: what you call your array
+    - size: how many elements you would like to contain in the array
+        ex) int student_grades[40]
+            type: int
+            name: student_grades
+            size: 40 intigers
+
+    declare and initialize simultaniously, there is syntax of how to fill up an array with its starting values
+
+   you can make a grid
+    ex) bool battleship[10][10]
+            this creates a grid that is 10 x 10
+
+    we can treat individual elements as variables but not the array as a variable, cant assign an array to another using '='
+
+    arrays are passed by reference, teh callee recieves the ACTUAL ARRAY not a copy
