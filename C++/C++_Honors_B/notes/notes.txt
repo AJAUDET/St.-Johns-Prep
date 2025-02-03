@@ -1,0 +1,371 @@
+DAY 1: Breakdown of intro.cpp
+
+    Hello world, its the clasic, yk the basics
+
+    Break it down
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+        cout << "Hello, World!" << endl;
+
+        return 0;
+    }
+
+        #include, statement that lets us import libraries into our code, c++ is a library.
+
+        <iostream>, one "book" from the library, input/output stream, lets us input and output info
+
+        using namespace std, simplifies input output
+
+        int main(), the main function
+
+        {}, this code belongs to this code ex) int main{code here}
+            1) int main(){
+
+            }
+
+            2) int main()
+            {
+
+            }
+
+        retrun 0, ends the main function
+
+        cout << "Hello, World! << endl,
+
+        cout by itself is output command
+        << any and all new info is sperated by aligators
+        "Hello, World!", "" indicates text, string
+        endl, end line, can also use \n
+
+        indentation, it matters
+
+COMMENTS:
+
+    BANE OF MY EXISTANCE YIPPEE:
+
+        // this is a single line comment
+
+        /*
+            this is a multi line comment
+        */
+
+
+COMMANDS:
+
+    How to navigate the terminal:
+
+        cd ___: change directory
+        ls : list
+        clear: clear
+        g++ ___: compile
+        ./a.out : run
+
+DAY 2: Intro to variables
+
+Variables:
+
+    Variables : storage device that contains a single piece of data of a certain type
+
+      int - stores integers (whole numbers), without decimals, such as 123 or -123
+      double - stores floating point numbers, with decimals, such as 19.99 or -19.99
+      char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+      string - stores text, such as "Hello World". String values are surrounded by double quotes, array of characters
+      bool - stores values with two states: true or false
+
+
+    Declaration // Initialization:
+
+        Declaration : first step, creating the variable by giving it a type and a name
+
+        Initialization : second step, giving the variable a value using the '=' operator
+
+        Declaration = Initialization
+                1) 
+                
+                    type name = value;
+
+                    type refrences data type
+                    name is the name of a variable
+                    value is the value of the variable (int, char, double, string, bool...etc.)
+
+                2)
+
+                    type name;
+                    name = value;
+
+                    you don't need to immidiatelty set a value to a variable.
+                
+    Names:
+
+        Rules:
+
+            1) No spaces in names
+            2) No special characters
+            3) Can't start w/ a number
+
+        Norms:
+
+            1) camelCase : lower then upper for multi worded things
+            2) Name after what it does or stores
+            3) No keywords
+
+            ex) your kdr in cod
+
+                double kd = 0.3;
+
+            ex) if you r passing the class
+
+                bool isPassing = true;
+
+            ex) variable for a name but use it later
+
+                string name;
+
+            ex) variable that keeps track of cat's lives
+
+                int catLives = 9;
+
+
+    int variables:
+
+        an = sign in math stands for equivalance
+
+        in CompSci. = assigns a value from the right to the left
+
+            ex)
+                
+                int x = 10;
+
+                x = x + 1; // x is now 11
+
+                OR 
+
+                x += 1;
+
+                OR 
+
+                x++;
+
+            its the same for subtraction multiplication and division cept the ** or // parts
+
+    
+DAY 3: INPUT AND OUTPUT 
+
+    cin:
+        enter info by pressing "Enter/Return"
+        
+        NO SPACES* 
+
+        side: dont put endl @ the end
+
+    cout:
+        outputs smmtn to the terminal
+
+
+DAY 4: Modulus & Randomness
+
+    symbol %, 
+
+    gives remainders of a number, remainder arithmatic 
+
+        45 % 5 = 0
+
+        13 % 5 = 3
+
+        40 % 6 = 4
+
+    Randomness:
+
+        srand(time(NULL));
+            tells the computer we are introcucing randomness,
+                time(null) allows us to access the computer's internal clock
+
+        rand() : generates the random value based on the computer's imternal clock
+
+        rand() % # : range of values from 0 <-> # - 1
+
+        ex) 
+        
+            fliping a coin : rand() % 2 
+
+            lazy grading : rand() % 101
+
+            dice roll : (rand() % 6) + 1
+
+Day 5: Randomness & if statements
+    
+    IF statement:
+        if(condition)
+        {
+            //code to run
+        }
+
+        Conditions are Boolean statements
+
+        Conditions:
+            Bool variables
+            Bool functions
+            Comparisons(<, >, ==, <=, >=, !=)
+
+    ELSE statement:
+        if(condition)
+        {
+            // code to run if true
+        }
+        else
+        {
+            // code to run if false
+        }
+
+    ELSE IF statement:
+        if(cond 1)
+        {
+            // code to run if true
+        }
+        else if(cond 2)
+        {
+            // code for cond 2
+        }
+        else if...
+
+DAY 6: Finlaizing IF statements
+
+    the three types IF, ELSE, and ELSE IF
+
+    Conditions of IF statements:
+
+        Multiple conditions checked:
+        
+        AND statement (cond. 1 && cond. 2) : Both need to be true to run the code 
+
+        OR statemnet (cond. 1 || cond. 2) : Only one needs to be true to run the code
+
+        NOT statement (!cond) / (cond != check) : Not the condition ie if (num != 1)...
+
+        Remember to group:
+
+        if ((cond 1 || cond 2) && cond 3)
+        {
+            code...
+        }
+
+DAY 8: Loops
+
+    what are loops? repeating sections of code if certain conditions are met
+
+        while: 
+
+            Syntax:
+                while (condition) {
+                    // code block to be executed
+                }
+
+            ex)
+                int x = 0;
+                while(x < 10)
+                {
+                    //code to loop
+                    x++;
+                }
+
+        for:
+
+            Syntax:
+                for (statement 1; statement 2; statement 3) {
+                    // code block to be executed
+                }
+
+            ex)
+                for (int i = 0; i < 10; i++)
+                {
+                    //code to execute
+                }
+        
+        do while:
+
+            Syntax:
+                do {
+                    // code block to be executed
+                }
+                while (condition);
+
+            ex)
+                int x;
+                do
+                {
+                    cin >> x;
+                }
+                while(x < 1)
+
+        for each:
+
+            Syntax:
+                for (type variableName : arrayName) {
+                // code block to be executed
+                }
+            
+            ex)
+                for(int i : array[i])
+                {
+                    
+                }
+
+    How loops work:
+        1. create a variable to check
+        2. check the variable in the condition
+        3. loop variable has to change within the loop
+
+
+Recursion:
+
+Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+
+Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.
+
+    Recursion Example
+    Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:
+
+    Example
+    int sum(int k) {
+    if (k > 0) {
+        return k + sum(k - 1);
+    } else {
+        return 0;
+    }
+    }
+
+    int main() {
+    int result = sum(10);
+    cout << result;
+    return 0;
+    }
+
+    Example Explained
+    When the sum() function is called, it adds parameter k to the sum of all numbers smaller than k and returns the result. 
+    When k becomes 0, the function just returns 0. When running, the program follows these steps:
+        10 + sum(9)
+        10 + ( 9 + sum(8) )
+        10 + ( 9 + ( 8 + sum(7) ) )
+        ...
+        10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + sum(0)
+        10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0
+
+    NOTE: The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, 
+            or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and 
+            mathematically-elegant approach to programming.
+
+
+Big O notation:
+    a way of classifying the complexity & speed of algorithms
+
+    Bubble:
+
+    Selection:
+
+    Insertion:
+        only goes through once, O(1)
