@@ -1,0 +1,105 @@
+Python Notes Prof. Malan
+
+        Python uses an interpreter to compile and run code, a single step
+
+        interpreter starts with python ______.py : blank is program name
+
+        ideas are relatively the same.
+
+        library uses import not #include
+
+        semi colons are not nescessary.
+
+        python is dynamically typed, so data types are implied,
+
+        concatenation is done with the + variable name
+
+        ex)
+                answer = get_string("What's your name? ")
+                print("Hello, " + answer)
+
+        ex)
+                answer = get_string("What's your name? ")
+                print("Hello, ", answer) // removal of the + is similar to how C does it
+
+        ex)
+                answer = get_string("What's your name? ")
+                print(f"Hello, {answer}") // {} indicates plug in the VALUE of answer, f is a format string modifier
+
+Data Types:
+
+    bool : True/False // capitalization matters
+    float :
+    int :
+    str : string and chars are now the same
+    range :
+    list : Arrays
+    tuple :
+    dict :
+    set : Collection of values that gets rid of duplicates
+
+CS50 Library
+
+    import cs50 : base
+
+    from cs50 import function : one at a time functions vs whole library
+
+    Conditionals:
+
+        if x < y:
+            print("y is greater than x")
+
+        standard indentation is required
+
+        if x < y:
+            print("x is less than y")
+        else:
+            print("x is not less than y")
+
+        the : after the statement replaces the curly braces
+
+        if x < y:
+            print("x is less than y")
+        elif x > y: // else if is condenced to elif
+            print("x is greater than y")
+        else:
+            print("x is equal to y")
+
+Assignment:
+
+    is a lot simpler than in C or C++, you do not need to specify data types
+
+    ex)
+        counter = 0 // need name = value, data type not needed
+
+    ex)
+        counter = counter + 1 // no longer need the ; to signify the end of the line
+
+    ex)
+        counter += 1 // same as C
+
+    Python got rid of Variable++
+
+Loops:
+
+    While Loop:
+
+        ex)
+            i = 0
+            while i < 3:
+                print("meow")
+                i += 1
+
+    For Loop:
+
+        ex)
+            for i in range(3): // loops 3 times
+                print("meow")
+
+        python is wierd when it comes to for loops.
+
+    Forever Loop:
+
+        ex)
+            while True:
+                print("meow")
